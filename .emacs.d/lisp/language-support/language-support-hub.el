@@ -1,0 +1,10 @@
+(require 'c-configuration)
+(require 'cpp-configuration)
+(require 'emacs-lisp-configuration)
+(require 'html-configuration)
+(require 'javascript-configuration)
+(require 'lilypond-configuration)
+(require 'org-configuration)
+(require 'ruby-configuration)
+
+(provide 'language-support-hub)

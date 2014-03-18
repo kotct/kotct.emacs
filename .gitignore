@@ -1,0 +1,14 @@
+# Autosaves
+*~
+
+# Local stuffies
+*.elc
+*.dat
+.emacs.d/ac-comphist.dat
+session.*
+
+# Packages
+.emacs.d/elpa/*
+
+# Patches
+*.patch
