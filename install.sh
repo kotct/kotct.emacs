@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR=`readlink -f ${BASH_SOURCE[0]}`
+DIR=`dirname \`readlink -f ${BASH_SOURCE[0]}\``
 
 echo "Installing all Emacs-related files from the kotct.emacs project to \$HOME"
 
