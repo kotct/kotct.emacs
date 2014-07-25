@@ -32,7 +32,7 @@
 (global-set-key (kbd "C-S-j") 'windmove-left)
 (global-set-key (kbd "C-S-k") 'windmove-down)
 (global-set-key (kbd "C-S-l") 'windmove-right)
-(global-set-key (kbd "C-S-u") 'delete-window)
+;(global-set-key (kbd "C-S-u") 'delete-window) ; won't work because unicode stuff
 
 ;; Use BRMake to compile with key "f5"
 (global-set-key (kbd "<f5>") 'brmake-compile-using-nearest-compilation-file)
