@@ -32,11 +32,9 @@
       (y-or-n-p
        (format "Do you want me to install all of the packages for you? ")))
 
-(mapc
- (lambda (package)
-   (or (package-installed-p package)
-       (if install-all
-           (package-install package)
-         (if (y-or-n-p (format "Package %s is missing. Install it? " package))
-             (package-install package)))))
- want-mah-packagez-list)
+(dolist (package want-mah-packagez-list)
+  (or (package-installed-p package)
+      (if install-all
+          (package-install package)
+        (if (y-or-n-p (format "Package %s is missing. Install it? " package))
+            (package-install package)))))
