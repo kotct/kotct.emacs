@@ -25,6 +25,7 @@
         gitignore-mode
         brainfuck-mode
         multi-term
+        paredit
         slime))
 
 (provide 'package-list)

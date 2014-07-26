@@ -10,5 +10,8 @@ session.*
 # Packages
 .emacs.d/elpa/*
 
+# Per-machine thingies
+.emacs.d/machine/*.el
+
 # Patches
 *.patch

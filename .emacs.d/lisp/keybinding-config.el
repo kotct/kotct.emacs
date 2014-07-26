@@ -41,4 +41,7 @@
 (require 'custom-fullscreen)
 (global-set-key (kbd "<f11>") 'custom-toggle-fullscreen)
 
+;; Use to switch between personal configs
+(global-set-key (kbd "C-x C-z") 'switch-username)
+
 (provide 'keybinding-config)
