@@ -24,6 +24,7 @@
         molokai-theme
         gitignore-mode
         brainfuck-mode
-        multi-term))
+        multi-term
+        slime))
 
 (provide 'package-list)

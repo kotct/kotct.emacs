@@ -3,6 +3,7 @@
 (require 'emacs-lisp-configuration)
 (require 'html-configuration)
 (require 'javascript-configuration)
+(require 'lisp-configuration)
 (require 'lilypond-configuration)
 (require 'org-configuration)
 (require 'ruby-configuration)
