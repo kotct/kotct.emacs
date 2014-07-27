@@ -4,7 +4,7 @@ DIR=`dirname \`readlink -f ${BASH_SOURCE[0]}\``
 
 echo "Installing all Emacs-related files from the kotct.emacs project to \$HOME"
 
-for file in .emacs .emacs.d;
+for file in .emacs.d;
 do
 	if test -e "$HOME/$file";
 	then

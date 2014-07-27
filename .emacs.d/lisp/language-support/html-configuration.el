@@ -1,1 +1,0 @@
-(provide 'html-configuration)
