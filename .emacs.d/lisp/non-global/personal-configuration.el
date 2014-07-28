@@ -1,6 +1,9 @@
 (setq username-config-alist
       '((() . "base-config")
         (("cooperc" "Christopher") . "cg505")
+        (("samm" "Samuel Mercier") . "samontea")
+        (("merciers" "Samuel Mercier") "samontea")
+        (("sam" "Samuel Mercier") "samontea")
         ;; (("user" "login") . "test")
         ))
 
