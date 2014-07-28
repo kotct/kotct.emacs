@@ -24,6 +24,8 @@
   (progn
     (message "Version checks complete, we should be good to go.")))
 
+(package-refresh-contents)
+
 (setq install-all
       (y-or-n-p
        (format "Do you want me to install all of the packages for you? ")))
