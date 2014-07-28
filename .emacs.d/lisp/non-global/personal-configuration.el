@@ -1,10 +1,8 @@
 (setq username-config-alist
       '((() . "base-config")
         (("cooperc" "Christopher") . "cg505")
-        (("samm" "Samuel Mercier") . "samontea")
-        (("merciers" "Samuel Mercier") . "samontea")
-        (("sam" "Samuel Mercier") . "samontea")
-        ;; (("user" "login") . "test")
+        (("samm" "merciers" "sam") . "samontea")
+        ;; (("user" "altuser") . "test")
         ))
 
 (defun username-from-user (&optional user)
