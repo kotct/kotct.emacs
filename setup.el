@@ -1,10 +1,9 @@
 ;; load-path expansion
-(setq load-path (append '("~/.emacs.d/lisp"
-                          "~/.emacs.d/lisp/language-support"
+(setq load-path (append '("~/.emacs.d/lisp/network"
                           "~/local-elisp") load-path))
 
-(require 'package)
-(require 'package-list)
+(require 'dependencies)
+(require 'package-manager-configuration)
 
 ;; Check version numbers
 (if (not (= emacs-major-version 24))
@@ -25,14 +24,11 @@
   (progn
     (message "Version checks complete, we should be good to go.")))
 
-(require 'package-source-config)
-(package-refresh-contents)
-
 (setq install-all
       (y-or-n-p
        (format "Do you want me to install all of the packages for you? ")))
 
-(dolist (package want-mah-packagez-list)
+(dolist (package dependency-list)
   (or (package-installed-p package)
       (if install-all
           (package-install package)
