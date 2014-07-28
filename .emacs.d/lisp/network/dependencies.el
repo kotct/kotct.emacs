@@ -38,6 +38,7 @@
 
         ;; Theme
         cyberpunk-theme
+        monokai-theme
         ))
 
 (provide 'dependencies)
