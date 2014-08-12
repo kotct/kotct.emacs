@@ -14,4 +14,6 @@
 
 (global-set-key (kbd "C-x C-z") 'switch-username)
 
+(global-set-key (kbd "C-M-w") 'copy-sexp-as-kill)
+
 (provide 'keybinding-configuration)
