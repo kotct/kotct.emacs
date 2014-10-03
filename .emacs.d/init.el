@@ -7,5 +7,4 @@
 (require 'interface-hub)
 (require 'network-hub)
 (require 'coding-hub)
-(require 'location-hub)
 (require 'non-global-hub)
