@@ -15,11 +15,11 @@
 (global-set-key (kbd "C-o") 'newline)
 
 ;it's getting smexy up in here ;)
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+;(global-set-key (kbd "M-x") 'smex)
+;(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;HELP! I need somebody HELP! not just anybody
-(global-set-key (kbd "C-x h") 'help-command)
+;(global-set-key (kbd "C-x h") 'help-command)
 
 (provide 'samontea-keybindings-configuration)

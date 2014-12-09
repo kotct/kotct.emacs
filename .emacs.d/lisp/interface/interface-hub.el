@@ -8,9 +8,9 @@
 (setq custom-safe-themes t)
 (add-to-list 'custom-theme-load-path "~/.emacs.d/lisp/interface/themes/")
 
-
-(require 'tuntu-theme)
-(load-theme 'tuntu)
+; no default theme because why would you have a default theme?
+;(require 'tuntu-theme)
+;(load-theme 'tuntu)
 
 (require 'set-font-size)
 
