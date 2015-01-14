@@ -12,6 +12,7 @@ session.*
 
 # Per-machine thingies
 .emacs.d/machine/*.el
+.emacs.d/machine/*.elc
 
 # Patches
 *.patch
