@@ -1,7 +1,7 @@
 (setq username-config-alist
       '((() . "base-config")
         (("cooperc" "Christopher") . "cg505")
-        (("samm" "merciers" "sam") . "samontea")
+        (("samm" "merciers" "sam" "smercier") . "samontea")
         ;; (("user" "altuser") . "test")
         ))
 
