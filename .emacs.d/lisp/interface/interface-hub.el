@@ -1,7 +1,6 @@
 (require 'keybinding-configuration)
 (require 'editor-startup-configuration)
 (require 'line-number-configuration)
-(require 'mode-line-configuration)
 (require 'graphical-interface-configuration)
 (require 'terminal-interface-configuration)
 
