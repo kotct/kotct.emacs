@@ -11,8 +11,7 @@ session.*
 .emacs.d/elpa/*
 
 # Per-machine thingies
-.emacs.d/machine/*.el
-.emacs.d/machine/*.elc
+.emacs.d/lisp/local/*
 
 # Patches
 *.patch
