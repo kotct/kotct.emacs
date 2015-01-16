@@ -9,6 +9,7 @@
         css-eldoc
         slime
         paredit
+        inf-ruby
 
         ;; Tag utilities
         ctags

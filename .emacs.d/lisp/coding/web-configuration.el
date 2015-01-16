@@ -12,14 +12,10 @@
       (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
       (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
-      (setq web-mode-markup-indent-offset 4)
-      (setq web-mode-css-indent-offset 4)
-      (setq web-mode-code-indent-offset 4)
-
-      (setq web-mode-script-padding 0)
-
-      ;; (font-lock-add-keywords 'web-mode
-      ;;                         '(("banana" . font-lock-builtin-face)))
+      (setq web-mode-markup-indent-offset 4
+            web-mode-css-indent-offset 4
+            web-mode-code-indent-offset 4
+            web-mode-script-padding 0)
 
 
       (add-hook 'web-mode-hook
