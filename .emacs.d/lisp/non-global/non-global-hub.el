@@ -1,4 +1,3 @@
-(require 'personal-configuration)
-(require 'machine-configuration)
+(require 'user-config-system)
 
 (provide 'non-global-hub)
