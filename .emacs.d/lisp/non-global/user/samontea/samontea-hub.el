@@ -9,8 +9,8 @@
   (unload-feature 'samontea-graphical-interface-configuration 'force)
   (unload-feature 'samontea-keybindings-configuration 'force)
   (unload-feature 'samontea-mode-line-configuration 'force)
-  (unload-feature 'samontea-scratch-buffer-configuration)
-  (unload-feature 'samontea-theme-configuration)
-  (unload-feature 'samontea-prefs))
+  (unload-feature 'samontea-scratch-buffer-configuration 'force)
+  (unload-feature 'samontea-theme-configuration 'force)
+  (unload-feature 'samontea-prefs 'force))
 
 (provide 'samontea-hub)
