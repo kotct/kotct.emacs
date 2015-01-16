@@ -8,3 +8,5 @@
 (require 'network-hub)
 (require 'coding-hub)
 (require 'non-global-hub)
+
+(load "local-hub" t)
