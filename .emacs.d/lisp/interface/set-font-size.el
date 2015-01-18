@@ -1,5 +1,5 @@
 (defun set-font-size (font-size)
-  "Sets the font hegiht to `font-size'"
+  "Sets the font height to `font-size'"
 
   (interactive "nEnter the font size: ")
 
