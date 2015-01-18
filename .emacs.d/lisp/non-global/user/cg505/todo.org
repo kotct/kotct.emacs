@@ -1,0 +1,14 @@
+* pianobar
+  (autoload 'pianobar "pianobar" nil t)
+* PHP-mode
+* idomenu
+** Use ido for imenu
+* midnight?
+** Cleans up extra buffers at midnight
+* lolcode-mode
+** also lockcaps
+* Web modes?
+** these might exist in some capacity already
+** SCSS-mode
+** YAML-mode
+*
