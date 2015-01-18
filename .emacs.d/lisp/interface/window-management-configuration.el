@@ -11,16 +11,17 @@
       ;; TODO: Windows/Mac OSX Support here? Linux supremacy for now.
       (message (format "Window system is not X, cannot make this window full-screen!")))))
 
-(defun close-current-frame-or-emacs ()
+(defun close-current-frame-or-emacs (&optional arg)
   "Closes the current frame or Emacs.
 
 Kills Emacs if 1 frame is in (frame-list) and not a server process,
-just current frame if otherwise."
-  (interactive)
+or if passed a  argument, but just current frame if otherwise."
+  (interactive "P")
+  (message "%s" arg)
 
   (condition-case nil
       (let ((frame-list (frame-list)))
-        (if (= (length frame-list) 1)
+        (if (or (= (length frame-list) 1) arg)
             (if (not server-process)
                 (kill-emacs)
               (if (y-or-n-p "Kill Emacs?")
