@@ -6,4 +6,6 @@
 
 (global-set-key (kbd "M-x") 'smex)
 
+(global-set-key (kbd "C-h") 'help-command)
+
 (provide 'cg505-keybindings)
