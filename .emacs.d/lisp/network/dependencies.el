@@ -10,6 +10,7 @@
         slime
         paredit
         inf-ruby
+        emacs-eclim ; java
 
         ;; Tag utilities
         ctags
