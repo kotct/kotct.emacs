@@ -36,6 +36,7 @@
 
         ;; Behavior controls
         smart-tabs-mode
+        smartparens
         linum-off
         smartscan
         ace-jump-mode
