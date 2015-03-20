@@ -13,5 +13,8 @@ session.*
 # Per-machine thingies
 .emacs.d/lisp/local/*
 
+# recentf
+.emacs.d/recentf
+
 # Patches
 *.patch
