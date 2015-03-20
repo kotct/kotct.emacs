@@ -32,7 +32,7 @@
 ;;; Fancy c comment thingy
 (add-hook 'c-mode-common-hook
           (lambda ()
-            (local-set-key (kbd "<RET>") 'custom-c-newline-check-comment)))
+            (local-set-key (kbd "<RET>") (c-newline-comment-setup "<RET>"))))
 
 ;;; Comment/uncomment line
 (global-set-key (kbd "C-;") 'toggle-comment-line)

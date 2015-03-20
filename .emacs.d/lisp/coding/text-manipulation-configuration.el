@@ -26,7 +26,7 @@
 ;; note, this randomly fails sometimes. If you just undo
 ;; and do it again, it works. If you can figure out why,
 ;; please fix it.
-(defun custom-c-newline-check-comment ()
+(defun custom-c-newline-check-comment (default-function)
   "Advanced `newline' command for C and C++ multiline block comments.
 Inserts a `*' at the beginning of the new line if inside of a comment."
   (interactive "*")
@@ -39,18 +39,22 @@ Inserts a `*' at the beginning of the new line if inside of a comment."
             (goto-char last)
             (search-backward "/*" nil t))))
     (goto-char last)
-    (newline-and-indent)
-    (when is-inside
-      (progn
-        (delete-backward-char 1)
-        (let ((last2 (point))
-              (mychar (progn (previous-line)
-                             (char-after))))
-          (goto-char last2)
-          (if (or (eq mychar ?\/) (eq mychar ?\ ))
-           (insert " ")))
-        (insert "* "))
-      )))
+    (if is-inside
+        (progn
+          (newline-and-indent)
+          (delete-backward-char 1)
+          (let ((last2 (point))
+                (mychar (progn (previous-line)
+                               (char-after))))
+            (goto-char last2)
+            (if (or (eq mychar ?\/) (eq mychar ?\ ))
+                (insert " ")))
+          (insert "* "))
+      (funcall default-function))))
+(defmacro c-newline-comment-setup (key)
+  `(lambda ()
+     (interactive)
+     (custom-c-newline-check-comment ',(key-binding (kbd key)))))
 
 ;;; comment/uncomment line
 ;; http://endlessparentheses.com/implementing-comment-line.html
