@@ -27,4 +27,8 @@
 
 (global-set-key (kbd "C-M-w") 'copy-sexp-as-kill)
 
+;; get rid of `find-file-read-only' and replace it with something
+;; more useful.
+(global-set-key (kbd "C-x C-r") 'ido-recentf-open)
+
 (provide 'keybinding-configuration)
