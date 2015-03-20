@@ -11,4 +11,4 @@
 ** these might exist in some capacity already
 ** SCSS-mode
 ** YAML-mode
-*
+* flyspell-mode default
