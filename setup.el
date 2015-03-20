@@ -10,7 +10,7 @@
     (progn
       (message "Not using Emacs 24!")
       (setq install-okay nil))
-  (if (not (= emacs-minor-version 3))
+  (if (not (>= emacs-minor-version 3))
       (progn
         (message "Not using Emacs 24.3!")
         (setq install-okay nil))
@@ -19,7 +19,7 @@
 ;; If something went wrong, abort.
 (if (not install-okay)
     (progn
-      (message "Please install Emacs 24.3!")
+      (message "Please install Emacs 24.3 or newer!")
       (kill-emacs))
   (progn
     (message "Version checks complete, we should be good to go.")))
