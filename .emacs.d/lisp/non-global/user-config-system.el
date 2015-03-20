@@ -28,7 +28,8 @@
 ;; Load the current username, based on login user
 (let ((username (username-from-user)))
  (if username
-     (load-username username)))
+     (load-username username)
+   (load-username "base-config")))
 
 (defun switch-username (username)
   "Unload the current personal config and load username's personal config"
