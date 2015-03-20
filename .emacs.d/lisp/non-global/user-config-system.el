@@ -31,15 +31,20 @@
      (load-username username)
    (load-username "base-config")))
 
-(defun switch-username (username)
+(defun switch-username (&optional username)
   "Unload the current personal config and load username's personal config"
-  (interactive "sSwitch to username: ")
+  (interactive)
+  (unless username (setq username
+                         (ido-completing-read "Switch to username: "
+                                              (cddr (directory-files "~/.emacs.d/lisp/non-global/user")))))
   (unload-username)
   ;; make sure that if the load fails we reload the stuff we just unloaded
   ;; so that we are actually loaded with current-username's config
   (condition-case err
       (load-username username)
     (error (load-username current-username)
-           (signal (car err) (cdr err)))))
+           (signal (car err) (cdr err))))
+  ;; maybe then also reload/rerun all the hooks and stuff for open buffers
+  )
 
 (provide 'user-config-system)
