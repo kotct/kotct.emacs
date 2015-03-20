@@ -7,8 +7,8 @@
         web-mode
         c-eldoc
         css-eldoc
-        slime
-        paredit
+        slime ; lisp
+        paredit ; lisp
         inf-ruby
         emacs-eclim ; java
 
@@ -37,6 +37,8 @@
         ;; Behavior controls
         smart-tabs-mode
         linum-off
+        smartscan
+        ace-jump-mode
 
         ;; Theme
         cyberpunk-theme
