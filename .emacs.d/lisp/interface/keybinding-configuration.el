@@ -34,6 +34,9 @@
           (lambda ()
             (local-set-key (kbd "<RET>") 'custom-c-newline-check-comment)))
 
+;;; Comment/uncomment line
+(global-set-key (kbd "C-;") 'toggle-comment-line)
+
 ;; get rid of `find-file-read-only' and replace it with something
 ;; more useful.
 (global-set-key (kbd "C-x C-r") 'ido-recentf-open)

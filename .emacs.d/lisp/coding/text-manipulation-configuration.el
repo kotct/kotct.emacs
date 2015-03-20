@@ -52,4 +52,19 @@ Inserts a `*' at the beginning of the new line if inside of a comment."
         (insert "* "))
       )))
 
+;;; comment/uncomment line
+;; http://endlessparentheses.com/implementing-comment-line.html
+(defun toggle-comment-line (n)
+  "Comment or uncomment current line and leave point after it.
+With positive prefix, apply to N lines including current one.
+With negative prefix, apply to -N lines above."
+  (interactive "p")
+  (let ((range (list (line-beginning-position)
+                     (goto-char (line-end-position n)))))
+    (comment-or-uncomment-region
+     (apply #'min range)
+     (apply #'max range)))
+  (forward-line 1)
+  (back-to-indentation))
+
 (provide 'text-manipulation-configuration)
