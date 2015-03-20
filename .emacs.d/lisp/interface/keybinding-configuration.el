@@ -29,6 +29,10 @@
 (global-set-key (kbd "C-M-w") 'copy-sexp-as-kill)
 (global-set-key (kbd "C-M-<backspace>") 'backspace-sexp)
 
+;;; Fancy c comment thingy
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (local-set-key (kbd "<RET>") 'custom-c-newline-check-comment)))
 
 ;; get rid of `find-file-read-only' and replace it with something
 ;; more useful.

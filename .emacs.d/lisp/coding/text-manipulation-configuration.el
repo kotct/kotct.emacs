@@ -22,4 +22,34 @@
     (backward-sexp arg)
     (clipboard-kill-region (point) beg)))
 
+;;; Cool C newline commend checker
+;; note, this randomly fails sometimes. If you just undo
+;; and do it again, it works. If you can figure out why,
+;; please fix it.
+(defun custom-c-newline-check-comment ()
+  "Advanced `newline' command for C and C++ multiline block comments.
+Inserts a `*' at the beginning of the new line if inside of a comment."
+  (interactive "*")
+  (let* ((last (point))
+         (is-inside
+          (if (search-backward "*/" nil t)
+              ;; if there are some comment endings - search forward
+              (search-forward "/*" last t)
+            ;; only comment - search backward
+            (goto-char last)
+            (search-backward "/*" nil t))))
+    (goto-char last)
+    (newline-and-indent)
+    (when is-inside
+      (progn
+        (delete-backward-char 1)
+        (let ((last2 (point))
+              (mychar (progn (previous-line)
+                             (char-after))))
+          (goto-char last2)
+          (if (or (eq mychar ?\/) (eq mychar ?\ ))
+           (insert " ")))
+        (insert "* "))
+      )))
+
 (provide 'text-manipulation-configuration)

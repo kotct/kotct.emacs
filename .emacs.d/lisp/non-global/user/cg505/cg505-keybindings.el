@@ -8,4 +8,8 @@
 
 (global-set-key (kbd "C-h") 'help-command)
 
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (local-set-key (kbd "C-j") 'custom-c-newline-check-comment)))
+
 (provide 'cg505-keybindings)
