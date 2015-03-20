@@ -33,3 +33,5 @@ done
 
 ln -s $DIR/.emacs $HOME/.emacs
 ln -s $DIR/.emacs.d $HOME/.emacs.d
+
+emacs --script $DIR/setup.el
