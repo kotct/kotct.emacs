@@ -2,6 +2,7 @@
 (require 'editor-startup-configuration)
 (require 'line-number-configuration)
 (require 'graphical-interface-configuration)
+(require 'file-management-configuration)
 
 (setq custom-safe-themes t)
 (add-to-list 'custom-theme-load-path "~/.emacs.d/lisp/interface/themes/")
@@ -13,4 +14,3 @@
 (require 'set-font-size)
 
 (provide 'interface-hub)
-
