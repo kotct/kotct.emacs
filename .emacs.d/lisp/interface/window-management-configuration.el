@@ -15,7 +15,7 @@
   "Closes the current frame or Emacs.
 
 Kills Emacs if 1 frame is in (frame-list) and not a server process,
-or if passed a  argument, but just current frame if otherwise."
+or if passed an argument, but just current frame if otherwise."
   (interactive "P")
   (message "%s" arg)
 
