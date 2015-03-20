@@ -13,4 +13,13 @@
     (clipboard-kill-ring-save beg (point))
     (setq *sexp-copy-count* 0)))
 
+;; Backspace sexp
+(defun backspace-sexp (arg)
+  "Kill sexp before the cursor (backspace for sexp's)."
+  (interactive "p")
+  (let ((beg (point))
+        (parse-sexp-ignore-comments t))
+    (backward-sexp arg)
+    (clipboard-kill-region (point) beg)))
+
 (provide 'text-manipulation-configuration)

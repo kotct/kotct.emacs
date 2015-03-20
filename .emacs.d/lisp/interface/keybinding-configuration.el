@@ -25,7 +25,10 @@
 ;hey buddy :)
 (global-set-key (kbd "C-x C-z") 'switch-username)
 
+;;; sex[yp] operators ;)
 (global-set-key (kbd "C-M-w") 'copy-sexp-as-kill)
+(global-set-key (kbd "C-M-<backspace>") 'backspace-sexp)
+
 
 ;; get rid of `find-file-read-only' and replace it with something
 ;; more useful.
