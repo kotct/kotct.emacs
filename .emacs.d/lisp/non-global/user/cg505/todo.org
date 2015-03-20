@@ -12,3 +12,4 @@
 ** SCSS-mode
 ** YAML-mode
 * flyspell-mode default
+* subword-mode
