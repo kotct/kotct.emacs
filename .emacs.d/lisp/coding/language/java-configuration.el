@@ -1,3 +1,6 @@
+;;; eclim
+;; requires both eclim and eclipse to be installed
+;; see http://www.emacswiki.org/emacs/EmacsEclim
 (require 'eclim)
 (global-eclim-mode)
 
