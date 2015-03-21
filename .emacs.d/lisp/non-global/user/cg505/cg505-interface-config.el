@@ -4,8 +4,44 @@
                             (thing (concat " %" (number-to-string (max 2 w)) "d ")))
                        (propertize (format thing line) 'face 'linum))))
 
-;; woah
-(load-theme 'cyberpunk)
+(setq theme-list '(cyberpunk
+                   sanityinc-tomorrow-night
+                   sanityinc-tomorrow-blue
+                   sanityinc-tomorrow-eighties
+                   sanityinc-tomorrow-bright
+                   zenburn
+                   solarized-dark
+                   monokai
+                   ample
+                   ample-flat
+                   brin
+                   granger
+                   spolsky
+                   graham
+                   odersky
+                   hickey
+                   fogus
+                   wilson
+                   junio
+                   smyx
+                   warm-night
+                   jazz
+                   tuntu))
+
+(defun switch-theme (&optional theme)
+  (interactive)
+  (unless theme (setq theme (nth (random (length theme-list)) theme-list)))
+  (dolist (loaded-theme custom-enabled-themes)
+    (disable-theme loaded-theme))
+  (load-theme theme t))
+
+(defun current-theme ()
+  (interactive)
+  (message "%s" (first custom-enabled-themes)))
+
+;;; set random theme on start
+(switch-theme)
+(run-at-time t (* 30 60) 'switch-theme)
 
 ;;; acheive longlines-mode type thing with visual-line-mode
 (defvar visual-wrap-column nil)
