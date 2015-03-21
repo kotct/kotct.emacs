@@ -12,6 +12,9 @@
       (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
       (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
+      (setq web-mode-engines-alist '(("ctemplate" . "\\.html\\'")))
+      (add-to-list 'auto-mode-alist '("ctemplate" . "\\.html\\'"))
+
       (setq web-mode-markup-indent-offset 4
             web-mode-css-indent-offset 4
             web-mode-code-indent-offset 4
@@ -20,8 +23,12 @@
 
       (add-hook 'web-mode-hook
                 (lambda nil
-                  (setq indent-tabs-mode t)
+                  (setq indent-tabs-mode t
+                        web-mode-enable-auto-pairing nil)
                   (if (require 'smart-tabs-mode nil 'no-error)
                       (smart-tabs-mode t))))))
+
+;; Do not compile SCSS at save.
+(setq scss-compile-at-save nil)
 
 (provide 'web-configuration)

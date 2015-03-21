@@ -23,7 +23,9 @@ or if passed an argument, but just current frame if otherwise."
       (let ((frame-list (frame-list)))
         (if (or (= (length frame-list) 1) arg)
             (if (not server-process)
-                (kill-emacs)
+                (if (y-or-n-p "Kill Emacs ?")
+                    (kill-emacs)
+                  (message "Didn't do anything, promise!"))
               (if (y-or-n-p "Kill Emacs?")
                   (kill-emacs)
                 (if (y-or-n-p "Delete current frame?")
@@ -32,5 +34,7 @@ or if passed an argument, but just current frame if otherwise."
           (delete-frame)))
     (error (kill-emacs))))
 
+;; Set yes-or-no prompt to y or n
+(fset 'yes-or-no-p 'y-or-n-p)
 
 (provide 'window-management-configuration)

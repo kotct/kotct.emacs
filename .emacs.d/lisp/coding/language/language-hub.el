@@ -4,5 +4,11 @@
 (require 'lisp-configuration)
 (require 'octave-configuration)
 (require 'java-configuration)
+(require 'c-configuration)
+(require 'python-configuration)
+(require 'csharp-configuration)
+(require 'gnuplot-configuration)
+(require 'vala-configuration)
+(require 'c++-configuration)
 
 (provide 'language-hub)

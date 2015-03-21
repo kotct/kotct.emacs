@@ -4,13 +4,23 @@
         ruby-mode
         yaml-mode
         markdown-mode
+        markdown-mode+
         web-mode
         c-eldoc
         css-eldoc
+        less-css-mode
+        scss-mode
         slime ; lisp
         paredit ; lisp
         inf-ruby
         emacs-eclim ; java
+        coffee-mode
+        csharp-mode
+        gitignore-mode
+        gnuplot-mode
+        groovy-mode
+        json-mode
+        vala-mode
 
         ;; Tag utilities
         ctags
@@ -33,6 +43,7 @@
         auto-complete-chunk
         auto-complete-exuberant-ctags
         multi-term
+        inflections
 
         ;; Behavior controls
         smart-tabs-mode
@@ -44,6 +55,15 @@
         ;; Theme
         cyberpunk-theme
         monokai-theme
+        solarized-theme
+        color-theme-sanityinc-tomorrow
+        zenburn-theme
+        ample-theme
+        sublime-themes
+        smyx-theme
+        warm-night-theme
+        jazz-theme
+        theme-changer
         ))
 
 (provide 'dependencies)
