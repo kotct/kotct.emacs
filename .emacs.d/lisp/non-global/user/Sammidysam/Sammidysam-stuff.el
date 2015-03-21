@@ -54,10 +54,8 @@
 (setq calendar-latitude 40.3994
       calendar-longitude -86.8617
       calendar-location-name "West Lafayette, Indiana")
-(add-hook 'customize-after-init-hook
-          (lambda ()
-            (require 'theme-changer)
-            (change-theme 'solarized-light 'solarized-dark)))
+(require 'theme-changer)
+(change-theme 'solarized-light 'solarized-dark)
 
 (defun mute-bell ()
   (interactive)
