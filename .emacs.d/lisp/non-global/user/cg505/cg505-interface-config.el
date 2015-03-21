@@ -76,4 +76,9 @@
         (set-window-margins nil (car current-margins)
                             (- current-available visual-wrap-column))))))
 
+(defun cg505-interface-config-unload-function ()
+  ;; unload theme
+  (dolist (loaded-theme custom-enabled-themes)
+    (disable-theme loaded-theme)))
+
 (provide 'cg505-interface-config)
