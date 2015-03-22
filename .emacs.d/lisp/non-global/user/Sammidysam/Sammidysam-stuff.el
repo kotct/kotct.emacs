@@ -70,6 +70,11 @@
 ;; mine).
 (setq initial-scratch-message ";; This is a scratch buffer.\n\n")
 
+(require 'auto-indent-mode)
+(auto-indent-global-mode)
+(require 'smartparens)
+(smartparens-global-mode 1)
+
 ;; Auto-insertion
 ; Remove the default auto-insert-alist because it has stupid stuff.
 (auto-insert-mode)
