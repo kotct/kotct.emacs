@@ -66,6 +66,10 @@
 
 (setq server-socket-dir "/tmp/emacs-shared")
 
+;; Sadly I don't want to see Sam's scratch message (his config is loaded before
+;; mine).
+(setq initial-scratch-message ";; This is a scratch buffer.\n\n")
+
 ;; Auto-insertion
 ; Remove the default auto-insert-alist because it has stupid stuff.
 (auto-insert-mode)
