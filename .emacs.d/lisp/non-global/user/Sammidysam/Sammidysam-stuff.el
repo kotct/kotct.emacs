@@ -150,12 +150,19 @@
   (set-window-dedicated-p (next-window) t)
   (other-window 2))
 
+;; Make C-x C-c prompt me about quitting
+(defun ask-before-closing ()
+   "Ask whether or not to close, and then close if y was pressed."
+     (interactive)
+       (if (y-or-n-p (format "Are you sure you want to exit Emacs? "))
+             (save-buffers-kill-emacs)
+                 (message "Canceled exit")))
+
 ;; Set key binding for creating nice layout
 ; Comment and uncomment bindings aren't consistent, so create new bindings.
 (global-set-key [f7] 'create-shell-layout)
 (global-set-key [f8] 'create-homework-layout)
 (global-set-key [f9] 'create-git-layout)
-(global-set-key (kbd "C-/") 'comment-region)
-(global-set-key (kbd "C-?") 'uncomment-region)
+(global-set-key (kbd "C-x C-c" 'ask-before-closing)
 
 (provide 'Sammidysam-stuff)
