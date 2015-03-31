@@ -2,6 +2,7 @@
       '((() . "base-config")
         (("cooperc" "Christopher") . "cg505")
         (("samm" "merciers" "sam" "smercier") . "samontea")
+        (("samc" "sam") . "Sammidysam")
         ;; (("user" "altuser") . "test")
         ))
 
