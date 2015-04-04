@@ -22,8 +22,13 @@
                     " "
                     (vc-mode vc-mode)
                     " "
+                    mode-line-misc-info
+                    " "
                     (:eval (mode-line-configuration-internal--get-extra-information-string))))))
 
+(setq-default battery-mode-line-format "[%b%p%%, %t] ")
+
+(display-battery-mode)
 (mode-line-configuration-internal--set-mode-line-format)
 
 (provide 'samontea-mode-line-configuration)
