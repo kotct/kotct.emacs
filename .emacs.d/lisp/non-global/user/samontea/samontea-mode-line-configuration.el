@@ -24,4 +24,6 @@
                     " "
                     (:eval (mode-line-configuration-internal--get-extra-information-string))))))
 
+(mode-line-configuration-internal--set-mode-line-format)
+
 (provide 'samontea-mode-line-configuration)
