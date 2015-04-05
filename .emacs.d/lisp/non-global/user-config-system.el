@@ -2,7 +2,7 @@
       '((() . "base-config")
         (("cooperc" "Christopher") . "cg505")
         (("samm" "merciers" ("sam" "jupiter") "smercier") . "samontea")
-        (("samc" ("sam" "minint-aimu6do" "trash")) . "Sammidysam")
+        (("samc" ("sam" "minint-aimu6do") ("sam" "trash")) . "Sammidysam")
         ;; (("user" ("altuser" "host")  "altaltuser") . "test")
         ))
 
