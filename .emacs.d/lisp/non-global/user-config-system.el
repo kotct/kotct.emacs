@@ -1,15 +1,16 @@
 (setq username-config-alist
       '((() . "base-config")
         (("cooperc" "Christopher") . "cg505")
-        (("samm" "merciers" "sam" "smercier") . "samontea")
+        (("samm" "merciers" ("sam" "jupiter") "smercier") . "samontea")
         (("samc" "sam") . "Sammidysam")
-        ;; (("user" "altuser") . "test")
+        ;; (("user" ("altuser" "host")  "altaltuser") . "test")
         ))
 
 (defun username-from-user (&optional user)
   "Convert from a login user (whoami) to a username"
   (unless user (setq user (user-login-name)))
-  (assoc-default user username-config-alist (lambda (x y) (member y x))))
+  (setq host (system-name))
+  (assoc-default (list user host) username-config-alist (lambda (x y) (or (member y x) (member (car y) x)))))
 
 (setq current-username nil)
 
