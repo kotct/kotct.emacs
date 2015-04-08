@@ -15,10 +15,10 @@
                  (lambda (x y)
                    (or
                     (member (car y) x)
-                    (some (lambda (z)
-                            (when (listp z)
-                              (member (cadr y) (cdr z))))
-                          x)))))
+                    (cl-some (lambda (z)
+                               (when (listp z)
+                                 (member (cadr y) (cdr z))))
+                             x)))))
 
 (setq current-username nil)
 
