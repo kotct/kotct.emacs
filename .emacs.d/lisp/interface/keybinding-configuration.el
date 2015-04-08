@@ -6,11 +6,6 @@
 (global-set-key (kbd "C-s-;") 'windmove-right)
 (global-set-key (kbd "<f11>") 'toggle-fullscreen)
 
-;HELP! I need somebody HELP! not just anybody
-(global-unset-key (kbd "C-h"))
-(global-set-key (kbd "C-x h") 'help-command)
-;HELP! I really need someone HE-E-ELP!
-
 (if (require 'multi-term nil 'no-error)
     (setq term-unbind-key-list (quote ("C-z" "C-x" "C-c" "C-y" "<ESC>"))))
 
