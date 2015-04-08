@@ -2,7 +2,7 @@
       '((() . "base-config")
         (("cooperc" "Christopher") . "cg505")
         (("samm" "merciers" ("sam" "jupiter") "smercier") . "samontea")
-        (("samc" ("sam" "minint-aimu6do") ("sam" "trash")) . "Sammidysam")
+        (("samc" ("sam" "minint-aimu6do" "trash")) . "Sammidysam")
         ;; (("user" ("altuser" "host")  "altaltuser") . "test")
         ))
 
@@ -10,7 +10,15 @@
   "Convert from a login user (whoami) to a username"
   (unless user (setq user (user-login-name)))
   (setq host (system-name))
-  (assoc-default (list user host) username-config-alist (lambda (x y) (or (member y x) (member (car y) x)))))
+  (assoc-default (list user host)
+                 username-config-alist
+                 (lambda (x y)
+                   (or
+                    (member (car y) x)
+                    (some (lambda (z)
+                            (when (listp z)
+                              (member (cadr y) (cdr z))))
+                          x)))))
 
 (setq current-username nil)
 
