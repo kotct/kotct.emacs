@@ -16,8 +16,8 @@
                    (or
                     (member (car y) x)
                     (cl-some (lambda (z)
-                               (when (listp z)
-                                 (member (cadr y) (cdr z))))
+                               (and (listp z)
+                                    (member (cadr y) (cdr z))))
                              x)))))
 
 (setq current-username nil)
