@@ -1,7 +1,7 @@
 (setq username-config-alist
       '((() . "base-config")
         (("cooperc" "Christopher") . "cg505")
-        (("samm" "merciers" ("sam" "jupiter") "smercier") . "samontea")
+        (("samm" "merciers" ("sam" "jupiter" "jupiter.netgear.com") "smercier") . "samontea")
         (("samc" ("sam" "minint-aimu6do" "trash")) . "Sammidysam")
         ;; (("user" ("altuser" "host")  "altaltuser") . "test")
         ))
