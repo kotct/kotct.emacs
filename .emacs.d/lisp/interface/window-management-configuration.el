@@ -22,8 +22,8 @@ or if passed an argument, but just current frame if otherwise."
   (condition-case nil
       (let ((frame-list (frame-list)))
         (if (or (= (length frame-list) 1) arg)
-            (if (not server-process)
-                (if (y-or-n-p "Kill Emacs ?")
+            (if (not (boundp 'server-process))
+                (if (y-or-n-p "Kill Emacs?")
                     (kill-emacs)
                   (message "Didn't do anything, promise!"))
               (if (y-or-n-p "Kill Emacs?")
