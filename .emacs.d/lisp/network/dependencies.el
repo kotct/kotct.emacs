@@ -54,6 +54,7 @@
         smartscan
         ace-jump-mode
         anzu
+        expand-region
 
         ;; Theme
         cyberpunk-theme
