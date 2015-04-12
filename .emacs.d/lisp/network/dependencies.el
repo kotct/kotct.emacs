@@ -36,6 +36,7 @@
         uuid
         backtrace-mode
         rainbow-mode
+        rainbow-delimiters
         fic-mode
         auto-complete
         auto-complete-clang-async
@@ -55,9 +56,12 @@
         smartscan
         ace-jump-mode
         anzu
+        browse-kill-ring
         volatile-highlights
         expand-region
         diminish
+        ido-vertical-mode
+        elisp-slime-nav
 
         ;; Theme
         cyberpunk-theme
@@ -70,6 +74,11 @@
         smyx-theme
         warm-night-theme
         jazz-theme
+        material-theme
+        twilight-anti-bright-theme
+        spacegray-theme
+        purple-haze-theme
+        darktooth-theme
         theme-changer
         ))
 

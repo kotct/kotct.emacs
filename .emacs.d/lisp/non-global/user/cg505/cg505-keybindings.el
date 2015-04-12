@@ -9,9 +9,18 @@
 (global-set-key (kbd "M-x") 'smex)
 
 (global-set-key (kbd "C-h") 'help-command)
+(global-set-key (kbd "C-x h") 'mark-whole-buffer)
 
 (add-hook 'c-mode-common-hook
           (lambda ()
             (local-set-key (kbd "C-j") (c-newline-comment-setup "C-j"))))
+
+(global-set-key (kbd "C-c C-f") 'sudo-edit)
+
+(global-set-key (kbd "M-y") 'browse-kill-ring)
+
+(global-set-key (kbd "C-x C-M-f") 'ffip)
+
+(global-set-key (kbd "C-x C-b") 'ibuffer-other-window)
 
 (provide 'cg505-keybindings)
