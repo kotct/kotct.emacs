@@ -1,24 +1,21 @@
-(defcustom monokai-height-plus-4 1.0
-             "ALL THE SAME"
-             :type 'number
-             :group 'monokai)
-(defcustom monokai-height-plus-3 1.0
-             "ALL THE SAME"
-             :type 'number
-             :group 'monokai)
-(defcustom monokai-height-plus-2 1.0
-             "ALL THE SAME"
-             :type 'number
-             :group 'monokai)
-(defcustom monokai-height-plus-1 1.0
-             "ALL THE SAME"
-             :type 'number
-             :group 'monokai)
-(defcustom monokai-height-minus-1 1.0
-             "ALL THE SAME"
-             :type 'number
-             :group 'monokai)
+(require 'monokai-theme)
 
-(load-theme 'monokai)
+(setq theme-list '(monokai
+                   wilson
+                   jazz))
+
+(defun switch-theme (&optional theme)
+  (interactive)
+  (unless theme (setq theme (nth (random (length theme-list)) theme-list)))
+  (dolist (loaded-theme custom-enabled-themes)
+    (disable-theme loaded-theme))
+  (load-theme theme t))
+
+(defun current-theme ()
+  (interactive)
+  (message "%s" (first custom-enabled-themes)))
+
+;;; set random theme on start
+(switch-theme)
 
 (provide 'samontea-theme-configuration)
