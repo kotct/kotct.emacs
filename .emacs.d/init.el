@@ -9,4 +9,5 @@
 (require 'coding-hub)
 (require 'non-global-hub)
 
-(load "local-hub" t)
+(if (load "local-hub" t)
+    (message "Local config loaded."))
