@@ -9,6 +9,6 @@
   (unload-feature 'cg505-coding-config 'force)
   (unload-feature 'cg505-interface-config 'force)
   (unload-feature 'cg505-keybindings 'force)
-  (unload-feature 'cg505-lib))
+  (unload-feature 'cg505-lib 'force))
 
 (provide 'cg505-hub)
