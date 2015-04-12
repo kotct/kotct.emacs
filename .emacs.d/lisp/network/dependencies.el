@@ -38,6 +38,7 @@
         rainbow-mode
         rainbow-delimiters
         fic-mode
+        auto-indent-mode
         auto-complete
         auto-complete-clang-async
         auto-complete-auctex

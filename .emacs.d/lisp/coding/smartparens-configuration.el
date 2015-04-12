@@ -1,5 +1,4 @@
-;; Uncomment if it breaks
-;; (require 'smartparens-config)
+(require 'smartparens-config)
 
 ;; Function relating to customizing something relating to smartparens
 (defun create-body (&rest _ignored)

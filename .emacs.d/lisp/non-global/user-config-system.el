@@ -1,14 +1,24 @@
 (setq username-config-alist
       '((() . "base-config")
         (("cooperc" "Christopher") . "cg505")
-        (("samm" "merciers" "sam" "smercier") . "samontea")
-        ;; (("user" "altuser") . "test")
+        (("samm" "merciers" ("sam" "jupiter" "jupiter.netgear.com") "smercier") . "samontea")
+        (("samc" ("sam" "minint-aimu6do" "trash")) . "Sammidysam")
+        ;; (("user" ("altuser" "host")  "altaltuser") . "test")
         ))
 
 (defun username-from-user (&optional user)
   "Convert from a login user (whoami) to a username"
   (unless user (setq user (user-login-name)))
-  (assoc-default user username-config-alist (lambda (x y) (member y x))))
+  (setq host (system-name))
+  (assoc-default (list user host)
+                 username-config-alist
+                 (lambda (x y)
+                   (or
+                    (member (car y) x)
+                    (cl-some (lambda (z)
+                               (and (listp z)
+                                    (member (cadr y) (cdr z))))
+                             x)))))
 
 (setq current-username nil)
 
