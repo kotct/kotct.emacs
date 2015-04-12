@@ -15,4 +15,7 @@
         (message "Opening file...")
       (message "Aborting"))))
 
+;; let find-file-in-project load all files in project
+(setq ffip-patterns '("*"))
+
 (provide 'file-management-configuration)

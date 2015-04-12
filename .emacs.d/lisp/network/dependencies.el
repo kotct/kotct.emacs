@@ -45,6 +45,7 @@
         auto-complete-exuberant-ctags
         multi-term
         inflections
+        find-file-in-project
         ac-slime
 
         ;; Behavior controls
