@@ -56,6 +56,7 @@
         anzu
         volatile-highlights
         expand-region
+        diminish
 
         ;; Theme
         cyberpunk-theme
