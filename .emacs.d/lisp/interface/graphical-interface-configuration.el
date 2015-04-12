@@ -5,4 +5,7 @@
 (set-fringe-mode 0)
 (show-paren-mode 1)
 
+(require 'volatile-highlights)
+(volatile-highlights-mode t)
+
 (provide 'graphical-interface-configuration)

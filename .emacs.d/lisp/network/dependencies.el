@@ -54,6 +54,7 @@
         smartscan
         ace-jump-mode
         anzu
+        volatile-highlights
         expand-region
 
         ;; Theme
