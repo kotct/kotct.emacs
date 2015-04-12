@@ -45,6 +45,7 @@
         auto-complete-exuberant-ctags
         multi-term
         inflections
+        ac-slime
 
         ;; Behavior controls
         smart-tabs-mode
