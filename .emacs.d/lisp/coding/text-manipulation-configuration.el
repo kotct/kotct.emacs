@@ -1,3 +1,8 @@
+;; Anzu
+(global-anzu-mode 1)
+(global-set-key (kbd "M-%") 'anzu-query-replace)
+(global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp)
+
 ;; Copy sexp as kill
 (setq *sexp-copy-count* 0)
 (defun count-commands () (setq *sexp-copy-count* (+ 1 *sexp-copy-count*)))

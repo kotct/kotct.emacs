@@ -53,6 +53,7 @@
         linum-off
         smartscan
         ace-jump-mode
+        anzu
 
         ;; Theme
         cyberpunk-theme
