@@ -12,6 +12,7 @@
         scss-mode
         slime ; lisp
         paredit ; lisp
+        elisp-slime-nav
         inf-ruby
         emacs-eclim ; java
         coffee-mode
