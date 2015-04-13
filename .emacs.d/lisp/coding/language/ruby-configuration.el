@@ -14,4 +14,6 @@
       (add-hook 'ruby-mode-hook (lambda () (smart-tabs-mode t))))
   (progn (message "Skipping Ruby support.")))
 
+(add-hook 'inf-ruby-mode-hook (lambda () (smartscan-mode 0)))
+
 (provide 'ruby-configuration)
