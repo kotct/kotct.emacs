@@ -49,6 +49,7 @@
         inflections
         find-file-in-project
         ac-slime
+        idomenu
 
         ;; Behavior controls
         smart-tabs-mode
