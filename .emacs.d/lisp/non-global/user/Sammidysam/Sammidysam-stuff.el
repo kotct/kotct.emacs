@@ -156,6 +156,5 @@
 (global-set-key [f7] 'create-shell-layout)
 (global-set-key [f8] 'create-homework-layout)
 (global-set-key [f9] 'create-git-layout)
-(global-set-key (kbd "C-x C-c") 'ask-before-closing)
 
 (provide 'Sammidysam-stuff)
