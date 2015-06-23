@@ -1,6 +1,9 @@
 (require 'monokai-theme)
 
-(setq theme-list '(monokai
+(setq theme-list '(cyberpunk
+                   monokai
+                   junio
+                   wombat
                    wilson
                    jazz))
 
