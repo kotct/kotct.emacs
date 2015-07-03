@@ -10,4 +10,8 @@
   (multi-term)
   (other-window 1))
 
+;;; transparency yeah!!!! :D
+(add-to-list 'default-frame-alist
+             '(alpha . (95 . 80)))
+
 (provide 'samontea-graphical-interface-configuration)
