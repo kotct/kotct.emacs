@@ -70,7 +70,7 @@ With an argument, do not refresh package list"
       (dolist (package install-list)
         (message (symbol-name (car package)))
         (setq install-list-string (concat install-list-string "\n" (symbol-name (car package)))))
-      (with-output-to-temp-buffer "packup: packages to upgrade"
+      (with-output-to-temp-buffer "*packup: packages to upgrade*"
         (format "%s" install-list-string)))
 
 
