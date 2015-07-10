@@ -63,21 +63,21 @@ With an argument, do not refresh package list"
 
                                                ;; ie if we have version 2.3.0 ask for 2.3.0.1
                                                (if updating (list (append (package-desc-version (cadr (assq package package-alist))) '(1))))))))))
-    (message "hi")
 
 
-    (let ((install-list-string "Packages to be installed: "))
+    (let ((install-list-string "Packages to be installed:") (print-quoted nil))
       (dolist (package install-list)
         (message (symbol-name (car package)))
         (setq install-list-string (concat install-list-string "\n" (symbol-name (car package)))))
       (with-output-to-temp-buffer "*packup: packages to upgrade*"
-        (print install-list-string)))
-
-
+        (with-current-buffer "*packup: packages to upgrade*"
+          (setq cursor-type nil)
+          (insert install-list-string))))
 
     (if (and (y-or-n-p "Auto install/update these package?") found)
         (progn (package-download-transaction (package-compute-transaction () install-list))
                (message "Dependency installation completed."))
-      (message "No dependencies needing installation."))))
+      (message "No dependencies needing installation."))
+    (kill-buffer "*packup: packages to upgrade*")))
 
 (provide 'package-installer)
