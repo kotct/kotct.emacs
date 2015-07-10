@@ -69,15 +69,16 @@ With an argument, do not refresh package list"
       (dolist (package install-list)
         (message (symbol-name (car package)))
         (setq install-list-string (concat install-list-string "\n" (symbol-name (car package)))))
-      (with-output-to-temp-buffer "*packup: packages to upgrade*"
-        (with-current-buffer "*packup: packages to upgrade*"
-          (setq cursor-type nil)
-          (insert install-list-string))))
+      (if found
+          (with-output-to-temp-buffer "*packup: packages to upgrade*"
+            (with-current-buffer "*packup: packages to upgrade*"
+              (setq cursor-type nil)
+              (insert install-list-string)))))
 
-    (if (and (y-or-n-p "Auto install/update these package?") found)
+    (if (and found (y-or-n-p "Auto install/update these package?"))
         (progn (package-download-transaction (package-compute-transaction () install-list))
-               (message "Dependency installation completed."))
-      (message "No dependencies needing installation."))
-    (kill-buffer "*packup: packages to upgrade*")))
+               (message "Dependency installation completed.")
+               (kill-buffer "*packup: packages to upgrade*"))
+      (message "No dependencies needing installation."))))
 
 (provide 'package-installer)
