@@ -143,8 +143,7 @@
   "Creates my Git layout used in programming."
   (interactive)
   (split-window-horizontally)
-  (other-window 1)
-  (magit-status (file-name-directory (buffer-file-name)) 'switch-to-buffer)
+  (magit-status)
   (split-window-vertically)
   (my-term)
   (set-window-dedicated-p (selected-window) t)
