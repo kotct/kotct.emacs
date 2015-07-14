@@ -50,6 +50,7 @@
         find-file-in-project
         ac-slime
         idomenu
+        git-gutter-fringe+
 
         ;; Behavior controls
         smart-tabs-mode
