@@ -79,6 +79,14 @@ With an argument, do not refresh package list"
         (progn (package-download-transaction (package-compute-transaction () install-list))
                (message "Dependency installation completed.")
                (kill-buffer "*packup: packages to upgrade*"))
-      (message "No dependencies needing installation."))))
+      (if found
+          (let ((manual-install-list nil))
+            (dolist (package install-list)
+              (if (y-or-n-p (format "Package %s is %s. Install it? " (car package) (if (cdr package) "out of date" "missing")))
+                  (add-to-list 'manual-install-list package)))
+            (progn (package-download-transaction (package-compute-transaction () manual-install-list))
+                   (message "Dependency installation completed.")
+                   (kill-buffer "*packup: packages to upgrade*")))
+        (message "No dependencies needing installation.")))))
 
 (provide 'package-installer)
