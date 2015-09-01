@@ -96,7 +96,7 @@
               (set-face-attribute 'mode-line nil :box nil)
               (set-face-attribute 'mode-line-inactive nil :box nil)
               (setq linum-format my-linum-format)
-              (fringe-mode 0)
+              (fringe-mode '(8 . 0))
               ))
 
 ;; set random theme on start
