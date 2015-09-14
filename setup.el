@@ -7,9 +7,11 @@
 
 ;; Check version numbers
 (if (not (= emacs-major-version 24))
-    (progn
-      (message "Not using Emacs 24!")
-      (setq install-okay nil))
+    (if (not (> emacs-major-version 24))
+	(progn
+	  (message "Not using Emacs 24!")
+	  (setq install-okay nil))
+      (setq install-okay t))
   (if (not (>= emacs-minor-version 3))
       (progn
         (message "Not using Emacs 24.3!")

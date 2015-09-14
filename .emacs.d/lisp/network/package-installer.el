@@ -1,7 +1,7 @@
 (defun package-up-to-date (package)
   (every (lambda (x) (package-installed-p package (package-desc-version x))) (cdr (assq package package-archive-contents))))
 
-(defun package-installer-install-dependencies (arg &optional update auto-install)
+(defun package-installer-install-dependencies (arg &optional update)
   "Installs the dependencies.
 With a non-nil or prefix ARG, do not refresh package list.
 If UPDATE is non-nil, out-of-date packages will be updated."
@@ -33,14 +33,6 @@ If UPDATE is non-nil, out-of-date packages will be updated."
         (progn (package-download-transaction (package-compute-transaction () install-list))
                (message "Dependency installation completed."))
       (message "No dependencies needing installation."))))
-
-(defun package-installer--update-all-packages (arg)
-  "Updates all packages and installs missing dependencies
-using `package-installer-install-dependencies'.
-With an argument, do not refresh package list"
-  (interactive "P")
-
-  (package-installer-install-dependencies arg t (y-or-n-p "Auto install and update all packages?")))
 
 (defun package-installer-packup (arg)
   "The new & improved package updater"
@@ -79,6 +71,14 @@ With an argument, do not refresh package list"
         (progn (package-download-transaction (package-compute-transaction () install-list))
                (message "Dependency installation completed.")
                (kill-buffer "*packup: packages to upgrade*"))
-      (message "No dependencies needing installation."))))
+      (if found
+          (let ((manual-install-list nil))
+            (dolist (package install-list)
+              (if (y-or-n-p (format "Package %s is %s. Install it? " (car package) (if (cdr package) "out of date" "missing")))
+                  (add-to-list 'manual-install-list package)))
+            (progn (package-download-transaction (package-compute-transaction () manual-install-list))
+                   (message "Dependency installation completed.")
+                   (kill-buffer "*packup: packages to upgrade*")))
+        (message "No dependencies needing installation.")))))
 
 (provide 'package-installer)
