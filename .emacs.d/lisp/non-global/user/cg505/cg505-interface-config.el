@@ -12,6 +12,7 @@
 
 (ido-vertical-mode 1)
 (setq ido-vertical-show-count t)
+(setq ido-vertical-define-keys 'C-n-and-C-p-only)
 
 ;;; none of this nice stuff works with --daemon
 ;; (setq my-font-list '(;;"Input Mono Light" ;too lazy to fix
