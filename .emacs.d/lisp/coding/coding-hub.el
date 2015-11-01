@@ -5,5 +5,6 @@
 (require 'text-manipulation-configuration)
 (require 'text-navigation-configuration)
 (require 'whitespace-configuration)
+(require 'recursive-make-configuration)
 
 (provide 'coding-hub)

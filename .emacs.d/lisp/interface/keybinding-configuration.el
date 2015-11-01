@@ -5,6 +5,7 @@
 (global-set-key (kbd "C-s-j") 'windmove-left)
 (global-set-key (kbd "C-s-;") 'windmove-right)
 (global-set-key (kbd "<f11>") 'toggle-fullscreen)
+(global-set-key (kbd "<f5>") 'recursive-make)
 
 (if (require 'multi-term nil 'no-error)
     (setq term-unbind-key-list (quote ("C-z" "C-x" "C-c" "C-y" "<ESC>"))))
