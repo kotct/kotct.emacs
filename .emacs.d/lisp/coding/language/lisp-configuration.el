@@ -3,7 +3,7 @@
     (progn
       ;; Please put the following line in your machine config
       ;; (setq inferior-lisp-program "/path/to/my/lisp/program")
-      (setq slime-contribs '(slime-fancy slime-asdf slime-banner slime-indentation slime-autodoc))
+      (setq slime-contribs '(slime-fancy slime-asdf slime-banner))
 
       (add-hook 'lisp-mode-hook
                 (lambda ()
