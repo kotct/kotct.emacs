@@ -1,6 +1,7 @@
 (defun recursive-make ()
   "Recursively search for a make function."
   (interactive)
-  (shell-command (concat "~/.emacs.d/python/findmake.py " (buffer-file-name (current-buffer)))))
+  (start-process "recursive-make" "*recursive-make*" "~/.emacs.d/python/findmake.py" (buffer-file-name (current-buffer)))
+  (display-buffer "*recursive-make*"))
 
 (provide 'recursive-make-configuration)
