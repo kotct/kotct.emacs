@@ -17,6 +17,7 @@
                     (member (car y) x)
                     (cl-some (lambda (z)
                                (and (listp z)
+                                    (equal (car y) (car z))
                                     (member (cadr y) (cdr z))))
                              x)))))
 
