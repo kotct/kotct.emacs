@@ -3,6 +3,7 @@
 (require 'line-number-configuration)
 (require 'graphical-interface-configuration)
 (require 'file-management-configuration)
+(require 'scratch-buffer-configuration)
 
 (setq custom-safe-themes t)
 (add-to-list 'custom-theme-load-path "~/.emacs.d/lisp/interface/themes/")
