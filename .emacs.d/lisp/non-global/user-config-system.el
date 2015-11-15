@@ -6,20 +6,19 @@
         ;; (("user" ("altuser" "host")  "altaltuser") . "test")
         ))
 
-(defun username-from-user (&optional user)
+(defun username-from-user (&optional user host)
   "Convert from a login user (whoami) to a username"
   (unless user (setq user (user-login-name)))
-  (setq host (system-name))
-  (assoc-default (list user host)
+  (unless host (setq host (system-hame)))
+  (assoc-default (cons user host)
                  username-config-alist
-                 (lambda (x y)
-                   (or
-                    (member (car y) x)
-                    (cl-some (lambda (z)
-                               (and (listp z)
-                                    (equal (car y) (car z))
-                                    (member (cadr y) (cdr z))))
-                             x)))))
+                 (lambda (alist-val user-host)
+                   (cl-some (lambda (elem)
+                              (if (listp elem)
+                                  (and (equal (car user-host) (car elem))
+                                       (member (cdr user-host) (cdr elem)))
+                                (equal (car user-host) elem)))
+                            alist-val))))
 
 (setq current-username nil)
 
