@@ -66,12 +66,9 @@
 
 (setq server-socket-dir "/tmp/emacs-shared")
 
-;; Sadly I don't want to see Sam's scratch message (his config is loaded before
-;; mine).
-(setq initial-scratch-message ";; This is a scratch buffer.\n\n")
-
 (require 'auto-indent-mode)
 (auto-indent-global-mode)
+(setq auto-indent-assign-indent-level 4)
 (require 'smartparens)
 (smartparens-global-mode 1)
 (require 'smartparens-configuration)
