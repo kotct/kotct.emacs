@@ -9,7 +9,7 @@
 (defun username-from-user (&optional user host)
   "Convert from a login user (whoami) to a username"
   (unless user (setq user (user-login-name)))
-  (unless host (setq host (system-hame)))
+  (unless host (setq host (system-name)))
   (assoc-default (cons user host)
                  username-config-alist
                  (lambda (alist-val user-host)
