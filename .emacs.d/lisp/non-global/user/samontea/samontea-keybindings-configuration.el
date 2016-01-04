@@ -12,7 +12,7 @@
 
 
 ;;o like functionality from vim, really helpful in org-mode
-(global-set-key (kbd "C-o") 'newline)
+(global-set-key (kbd "C-o") 'vim-new-line-below)
 
 ;;it's getting smexy up in here ;)
 ;;(global-set-key (kbd "M-x") 'smex)
