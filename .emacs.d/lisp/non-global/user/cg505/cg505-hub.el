@@ -5,6 +5,7 @@
 (require 'cg505-theme-config)
 (require 'cg505-keybindings)
 (require 'cg505-mode-line-configuration)
+(require 'cg505-timings)
 
 (defun cg505-hub-unload-function ()
   (unload-feature 'cg505-paredit-config 'force)
@@ -12,7 +13,8 @@
   (unload-feature 'cg505-interface-config 'force)
   (unload-feature 'cg505-theme-config 'force)
   (unload-feature 'cg505-keybindings 'force)
-  (unload-feature 'cg505-lib 'force)
-  (unload-feature 'cg505-mode-line-configuration 'force))
+  (unload-feature 'cg505-mode-line-configuration 'force)
+  (unload-featuer 'cg505-timings 'force)
+  (unload-feature 'cg505-lib 'force))
 
 (provide 'cg505-hub)
