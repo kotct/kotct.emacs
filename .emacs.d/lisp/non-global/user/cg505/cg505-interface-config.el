@@ -1,10 +1,5 @@
 ;; -*- eval: (rainbow-mode 1) -*-
 
-;; use a hook so that we can use emacs-init-time
-(add-hook 'after-init-hook
-          (lambda ()
-            (setq initial-scratch-message (concat ";; init: " (emacs-init-time) (format-time-string " @ %T on %F")  "\n;; " (user-login-name) "@" (system-name) " loaded config for " current-username "\n;; scratch away\n\n"))))
-
 ;; Dynamic right-aligned linum fill width
 (setq my-linum-format (lambda (line)
                         (let* ((w (length (number-to-string (count-lines (point-min) (point-max)))))

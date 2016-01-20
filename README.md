@@ -12,6 +12,7 @@ Installation & Setup
 Dependencies
 ------------
 There is an optional dependency of wmctrl for fullscreen functionality.
+There is an optional dependency of python for recursive make functionality.
 
 Machine Specific Configs
 ------------

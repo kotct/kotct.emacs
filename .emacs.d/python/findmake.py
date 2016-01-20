@@ -19,4 +19,6 @@ while i < max_dir and not (directory.joinpath('Makefile').exists()):
     i += 1
 
 if directory.joinpath('Makefile').exists():
-    Popen("make", cwd=str(directory))
+   Popen("make", cwd=str(directory)).wait()
+else:
+    print("No makefile found")
