@@ -14,7 +14,7 @@
   (unload-feature 'cg505-theme-config 'force)
   (unload-feature 'cg505-keybindings 'force)
   (unload-feature 'cg505-mode-line-configuration 'force)
-  (unload-featuer 'cg505-timings 'force)
+  (unload-feature 'cg505-timings 'force)
   (unload-feature 'cg505-lib 'force))
 
 (provide 'cg505-hub)
