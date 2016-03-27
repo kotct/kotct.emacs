@@ -10,5 +10,6 @@
 (require 'gnuplot-configuration)
 (require 'vala-configuration)
 (require 'c++-configuration)
+(require 'r-configuration)
 
 (provide 'language-hub)

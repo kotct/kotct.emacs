@@ -22,6 +22,7 @@
         groovy-mode
         json-mode
         vala-mode
+        ess ; R
 
         ;; Tag utilities
         ctags
