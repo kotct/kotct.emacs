@@ -37,7 +37,7 @@ buffer is not visiting a file."
 (define-key smartparens-mode-map (kbd "C-<left>") #'sp-forward-barf-sexp)
 (define-key smartparens-mode-map (kbd "C-(")  #'sp-backward-slurp-sexp)
 (define-key smartparens-mode-map (kbd "C-M-<left>") #'sp-backward-slurp-sexp)
-(define-key smartparens-mode-map (kbd "C-{")  #'2sp-backward-barf-sexp)
+(define-key smartparens-mode-map (kbd "C-{")  #'sp-backward-barf-sexp)
 (define-key smartparens-mode-map (kbd "C-M-<right>") #'sp-backward-barf-sexp)
 ;; Miscellaneous commands
 (define-key smartparens-mode-map (kbd "M-S") #'sp-split-sexp)
