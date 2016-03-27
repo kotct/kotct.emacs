@@ -8,6 +8,9 @@
 .emacs.d/smex-items
 .emacs.d/ido.last
 .emacs.d/tramp
+.emacs.d/.emacs.desktop
+.emacs.d/.emacs.desktop.lock
+.emacs.d/network-security.data
 session.*
 
 # Packages
