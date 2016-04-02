@@ -66,6 +66,7 @@
         diminish
         ido-vertical-mode
         elisp-slime-nav
+        buffer-move
 
         ;; Theme
         cyberpunk-theme
