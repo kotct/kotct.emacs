@@ -65,7 +65,6 @@
         expand-region
         diminish
         ido-vertical-mode
-        elisp-slime-nav
         buffer-move
 
         ;; Theme
