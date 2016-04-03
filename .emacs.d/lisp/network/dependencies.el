@@ -50,7 +50,7 @@
         inflections
         find-file-in-project
         ac-slime
-        idomenu
+        imenu-anywhere
         git-gutter-fringe+
 
         ;; Behavior controls

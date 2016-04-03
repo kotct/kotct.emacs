@@ -19,6 +19,9 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
+;; imenu <3 <3 <3 <3
+(global-set-key (kbd "C-.") 'imenu-anywhere)
+
 ;lord knows what -probably sam because really it's pretty self-explanatory
 (global-set-key (kbd "C-x C-c") 'close-current-frame-or-emacs)
 
