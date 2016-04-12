@@ -50,4 +50,7 @@
 (global-set-key (kbd "C-=") 'er/expand-region)
 (global-set-key (kbd "C-+") 'er/contract-region)
 
+;; rebind C-x C-d from list-directory to dired
+(global-set-key (kbd "C-x C-d") 'dired)
+
 (provide 'keybinding-configuration)
