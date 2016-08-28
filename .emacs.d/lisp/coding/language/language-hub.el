@@ -11,5 +11,6 @@
 (require 'vala-configuration)
 (require 'c++-configuration)
 (require 'r-configuration)
+(require 'elixir-configuration)
 
 (provide 'language-hub)
