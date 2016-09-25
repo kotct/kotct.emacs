@@ -3,7 +3,7 @@
 ;; Add Marmalade repository
 (add-to-list 'package-archives
              '("marmalade" .
-               "http://marmalade-repo.org/packages/") t)
+               "https://marmalade-repo.org/packages/") t)
 
 ;; Add ELPA repository
 (add-to-list 'package-archives
@@ -13,12 +13,12 @@
 ;; Add MELPA repository
 (add-to-list 'package-archives
              '("melpa" .
-               "http://melpa.milkbox.net/packages/") t)
+               "https://melpa.org/packages/") t)
 
 ;; Add GNU repository
 (add-to-list 'package-archives
              '("gnu" .
-               "http://elpa.gnu.org/packages/") t)
+               "https://elpa.gnu.org/packages/") t)
 
 ;; Initialize the package manager.
 (package-initialize)

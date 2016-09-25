@@ -14,7 +14,7 @@
         paredit ; lisp
         elisp-slime-nav
         inf-ruby
-        emacs-eclim ; java
+        eclim ; java
         coffee-mode
         csharp-mode
         gitignore-mode
