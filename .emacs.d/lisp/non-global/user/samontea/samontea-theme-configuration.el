@@ -5,6 +5,7 @@
                    junio
                    wombat
                    wilson
+                   twilight-anti-bright
                    jazz))
 
 (defun switch-theme (&optional theme)

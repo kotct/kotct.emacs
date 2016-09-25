@@ -1,4 +1,4 @@
-(set-face-attribute 'default nil :height 100)
+(set-face-attribute 'default nil :height 105)
 
 (defun create-normal-layout ()
   "Creates the layout I use generally when working."

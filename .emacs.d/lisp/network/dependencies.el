@@ -23,6 +23,8 @@
         json-mode
         vala-mode
         ess ; R
+        elixir-mode
+        alchemist
 
         ;; Tag utilities
         ctags
