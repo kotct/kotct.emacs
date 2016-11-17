@@ -153,4 +153,7 @@
 (global-set-key [f8] 'create-homework-layout)
 (global-set-key [f9] 'create-git-layout)
 
+;; I need more calculator digits, man.
+(setq calculator-number-digits 10)
+
 (provide 'Sammidysam-stuff)
